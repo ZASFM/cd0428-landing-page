@@ -221,3 +221,145 @@ section.your-active-class .landing__container::after {
 		           rotate(-360deg);
 	}
 }
+
+.formContainer .name{
+    grid-area: name;
+}
+
+.formContainer .sureName{
+    grid-area: sureName;
+}
+
+.formContainer .email{
+    grid-area: email;
+}
+
+.formContainer .phone{
+    grid-area: phone;
+}
+
+.formContainer .subject{
+    grid-area: subject;
+}
+
+.formContainer .message{
+    grid-area: message;
+}
+
+.formContainer .submit{
+    grid-area: submit;
+}
+
+.formContainer{
+    background-color: white;
+    color: black;
+}
+
+.formContainer form{
+    box-sizing: border-box;
+    width: 100%;
+    display: grid;
+    grid: repeat(4,75px)/repeat(2,1fr);
+    grid-template-areas: 'name subject' 'sureName message' 'email message' 'phone submit';
+    column-gap: 1.5rem;
+    padding:10px 15px;
+}
+
+.formContainer div input{
+    border: none;
+    border-bottom: 1px solid black;
+    width: 100%;
+    font-size: 1rem;
+    padding: 5px;
+}
+
+.formContainer div>button{
+    border: 2px solid purple;
+    border-radius: 25px;
+    background-color: white;
+    padding:17.5px 25px;
+    font-weight: bold;
+    width: 100%;
+    font-size: 1.3rem;
+    color: palevioletred;
+}
+
+.formContainer div>button:hover{
+    background-color: purple;
+    color:white;
+    cursor: pointer;
+    transition: ease .4s all;
+}
+
+.formContainer div>button:active{
+    background-color: purple;
+    color:white;
+    cursor: pointer;
+    transition: ease .4s all;
+}
+
+.formContainer div label{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.formContainer .title{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:30px 0px;
+}
+
+.formContainer .title .header{
+    font-size: 3rem;
+    color: purple;
+    font-weight: bold;
+}
+
+.formContainer .title .description{
+    font-size: 1.4rem;
+    margin:50px 0px;
+}
+
+.formContainer .disclaimer{
+    display: flex;
+    justify-content: center;
+    font-size: 1.1rem;
+    margin-top: 15px;
+}
+
+.formContainer .disclaimer>i{
+    margin-right: 15px;
+}
+
+/* .succesfullContainer{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    position:absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.succesfullContainer .succesfullMessage{
+    display: none;
+    width: 50%;
+    height: 300px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 0 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0px 50px;
+} */

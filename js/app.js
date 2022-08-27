@@ -1,4 +1,3 @@
-const name='Mohammad';
 /**
  * 
  * Manipulating the DOM exercise.
@@ -40,7 +39,16 @@ const name='Mohammad';
 */
 
 // build the nav
-
+let sectionCount=document.querySelectorAll('section');
+let navbar__list=document.querySelector('#navbar__list');
+let liCounter=0;
+for(let i=0;i<=sectionCount.length-1;i++){
+   let li=document.createElement('li');
+   li.classList.add('menu__link');
+   liCounter++;
+   li.innerText=`Section ${liCounter}`;
+   navbar__list.appendChild(li);
+}
 
 // Add class 'active' to section when near top of viewport
 
@@ -60,4 +68,17 @@ const name='Mohammad';
 
 // Set sections as active
 
-
+//Successful message:
+/* const body=document.querySelector('body')
+const formButton=document.getElementById('button');
+formButton.addEventListener('click',function displayMessage(){
+   let outerDiv=document.createElement('div');
+   let innerDiv=document.createElement('div');
+   outerDiv.classList.add('succesfullContainer');
+   innerDiv.classList.add('succesfullMessage');
+   let text=document.createTextNode('Your submission was received, now close this window please');
+   innerDiv.appendChild(text);
+   outerDiv.appendChild(innerDiv);
+   body.appendChild(outerDiv);
+   console.log(innerDiv,outerDiv);
+}) */
