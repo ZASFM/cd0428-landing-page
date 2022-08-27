@@ -1,3 +1,4 @@
+const name='Mohammad';
 /**
  * 
  * Manipulating the DOM exercise.
