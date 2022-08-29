@@ -68,6 +68,11 @@ section {
     padding-left: 0;
     margin: 0;
     text-align: right;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap:3rem;
 }
 
 .navbar__menu li {
@@ -80,6 +85,14 @@ section {
     font-weight: bold;
     text-decoration: none;
     color: #000;
+}
+
+.navbar__menu #navbar__list li a.selected{
+    color: red;
+}
+
+.navbar__menu #navbar__list li:hover{
+    background-color: black;
 }
 
 .navbar__menu .menu__link:hover {
@@ -326,7 +339,7 @@ section.your-active-class .landing__container::after {
     display: flex;
     justify-content: center;
     font-size: 1.1rem;
-    margin-top: 15px;
+    padding:15px 0px;
 }
 
 .formContainer .disclaimer>i{
