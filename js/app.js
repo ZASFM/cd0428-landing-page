@@ -64,9 +64,11 @@ function makeActive(){
           let anchor=document.querySelectorAll('a');
             for(let i=0;i<anchor.length;i++){
                if(anchor[i].innerText.toString()===section.getAttribute('data-nav').toString()){
-                  anchor[i].classList.add('selected')
+                  anchor[i].parentElement.classList.add('selected');
+                  anchor[i].style.color='white';
                }else{
-                  anchor[i].classList.remove('selected');
+                  anchor[i].parentElement.classList.remove('selected');
+                  anchor[i].style.color='black';
                }
             }
        }else {
@@ -76,6 +78,37 @@ function makeActive(){
  }
  document.addEventListener("scroll", function() { makeActive();});
 
+ let liEl=document.getElementsByClassName('menu__link');
+ let ulEl=document.getElementById('navbar__list');
+ ulEl.addEventListener('mouseover',function(event){
+   let target=event.target;
+   if(target.matches('a')){
+      target.setAttribute('style','color:white;')
+   }
+ })
+
+ ulEl.addEventListener('mouseout',function(event){
+   let target=event.target;
+   if(target.matches('a')){
+      target.setAttribute('style','background-color:none;')
+   }
+ })
+ for(let li of liEl){
+   li.addEventListener('mouseover',function(e){
+      let target=e.target;
+      target.style.color='white';
+   })
+ }
+
+ for(let li of liEl){
+   li.addEventListener('mouseout',function(e){
+      let target=e.target;
+      if(!target.classList.contains('selected') && target.matches('a')){
+         console.log(true);
+      }
+      target.style.color='black';
+   })
+ }
 /*  document.addEventListener('scroll',function checkActive(){
    
  }) */
@@ -86,7 +119,6 @@ function makeActive(){
    if(isActive){
       target.classList.remove('active')
    }
-
    if(target.classList.contains('menu__link')){
       target.classList.add('active');
    }
