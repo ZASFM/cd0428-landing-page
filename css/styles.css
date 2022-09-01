@@ -304,7 +304,7 @@ section.your-active-class .landing__container::after {
     padding: 5px;
 }
 
-.formContainer div>button{
+.formContainer div>#button{
     border: 2px solid purple;
     border-radius: 25px;
     background-color: white;
@@ -315,14 +315,14 @@ section.your-active-class .landing__container::after {
     color: palevioletred;
 }
 
-.formContainer div>button:hover{
+.formContainer div>#button:hover{
     background-color: purple;
     color:white;
     cursor: pointer;
     transition: ease .4s all;
 }
 
-.formContainer div>button:active{
+.formContainer div>#button:active{
     background-color: purple;
     color:white;
     cursor: pointer;
@@ -377,6 +377,11 @@ section.your-active-class .landing__container::after {
     font-family: Arial, Helvetica, Sans-serif;
     padding: 8px;
 }
+
+
+/* .form{
+    display: none;
+} */
 
 @media (max-width:800px){
     .formContainer form{

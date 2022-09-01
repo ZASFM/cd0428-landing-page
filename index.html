@@ -65,10 +65,10 @@
   <div class="formContainer">
     <div class="title">
        <div class="header">Subscribe to our newsletter to get updated</div>
-       <div class="description">So, yh its basically that you subscribe and the hell begins, its very fun trust me</div>
+       <div class="description">*The submit button is disbaled until you fill the required data</div>
     </div>
+    <div class="form">
     <form action="index.html" enctype="application/x-www-form-urlencoded" method="POST">
-      <input type="hidden" name="source" value="contactForm_landingPage">
       <div class="name">
         <label for="nameField">First name:</label><br>
         <input type="text" id="nameField" name="name" placeholder="Write your first name here" required>
@@ -92,13 +92,14 @@
       <div class="message">
         <label for="messageField">Message:</label><br>
         <div class="textArea-container">
-          <textarea placeholder="Write a brief message" id="messageField" name="message" required></textarea>
+          <textarea placeholder="Write a brief message" id="messageField" name="message"></textarea>
         </div>
       </div>
       <div class="submit">
-        <button type="submit" id="button">Sumbit</button>
+        <input type="submit" id="button" disabled="true"></input>
       </div>
    </form>
+   </div>
    <div class="disclaimer">
     <i class='fa fa-lock'></i><span>We wont spam you, keep beliving that</span>
    </div>
