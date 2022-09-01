@@ -87,8 +87,28 @@ section {
     color: #000;
 }
 
+.navbar__menu #navbar__list li:hover{
+    background-color: black;
+}
+
+.navbar__menu #navbar__list li a:hover{
+    color: white;
+}
+
 .navbar__menu #navbar__list li.selected{
     background-color: black;
+}
+
+.navbar__menu #navbar__list li.selected a{
+    color: white;
+}
+
+.navbar__menu #navbar__list li.selected:hover{
+    background-color: black;
+}
+
+.navbar__menu #navbar__list li.selected a:hover{
+    color: white;
 }
 
 .navbar__menu #navbar__list li a{
@@ -96,13 +116,6 @@ section {
     color:black;
 }
 
-/* .navbar__menu #navbar__list li:hover{
-    background-color: black;
-}
-
-.navbar__menu #navbar__list li a:hover{
-    color: white;
-}  */
 
 /* Header Styles */
 .page__header {
